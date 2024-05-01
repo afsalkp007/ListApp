@@ -39,9 +39,10 @@ public class RemoteFeedLoader {
     client.get(from: url) { result in
       switch result {
       case let .success(data, response):
-        if response.statusCode == 200, let items = try? JSONDecoder().decode(Root.self, from: data) {
-          completion(.success(items.map { $0.item }))
-        } else {
+        do {
+          let items = try FeedItemsMapper.map(data, response)
+          completion(.success(items))
+        } catch {
           completion(.failure(.invalidData))
         }
       case .failure:
@@ -51,27 +52,37 @@ public class RemoteFeedLoader {
   }
 }
 
-private typealias Root = [Item]
 
-private struct Item {
-  let name: String
-  let state: String?
-  let country: String
-  let countryCode: String
-  let webpage: [String]
-  
-  var item: FeedItem {
-    return FeedItem(name: name, state: state, country: country, countryCode: countryCode, webpage: webpage)
+private class FeedItemsMapper {
+  private typealias Root = [Item]
+
+  private struct Item: Decodable {
+    let name: String
+    let state: String?
+    let country: String
+    let countryCode: String
+    let webpage: [String]
+    
+    var item: FeedItem {
+      return FeedItem(name: name, state: state, country: country, countryCode: countryCode, webpage: webpage)
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+      case name
+      case state = "state-province"
+      case country
+      case countryCode = "alpha_two_code"
+      case webpage = "web_pages"
+    }
   }
-}
 
-extension Item: Decodable {
-  private enum CodingKeys: String, CodingKey {
-    case name
-    case state = "state-province"
-    case country
-    case countryCode = "alpha_two_code"
-    case webpage = "web_pages"
+  static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [FeedItem] {
+    guard response.statusCode == 200 else {
+      throw RemoteFeedLoader.Error.invalidData
+    }
+    
+    let items = try JSONDecoder().decode(Root.self, from: data)
+    return items.map { $0.item }
   }
 }
 
