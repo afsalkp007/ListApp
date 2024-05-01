@@ -8,7 +8,6 @@
 import Foundation
 
 class FeedItemsMapper {
-  private typealias Root = [Item]
 
   private struct Item: Decodable {
     let name: String
@@ -32,12 +31,12 @@ class FeedItemsMapper {
   
   static var OK_200: Int { return 200 }
 
-  static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [FeedItem] {
-    guard response.statusCode == OK_200 else {
-      throw RemoteFeedLoader.Error.invalidData
+  internal static func map(_ data: Data, from response: HTTPURLResponse) -> RemoteFeedLoader.Result {
+    guard response.statusCode == OK_200,
+      let feed = try? JSONDecoder().decode([Item].self, from: data) else {
+      return .failure(.invalidData)
     }
     
-    let items = try JSONDecoder().decode(Root.self, from: data)
-    return items.map { $0.item }
+    return .success(feed.map(\.item))
   }
 }
