@@ -7,10 +7,18 @@
 
 import Foundation
 
-struct FeedItem {
-  let name: String
-  let state: String?
-  let country: String
-  let countryCode: String
-  let webpage: [String]
+public struct FeedItem: Equatable {
+  public let name: String
+  public let state: String?
+  public let country: String
+  public let countryCode: String
+  public let webpage: [String]
+  
+  public init(name: String, state: String?, country: String, countryCode: String, webpage: [String]) {
+    self.name = name
+    self.state = state
+    self.country = country
+    self.countryCode = countryCode
+    self.webpage = webpage
+  }
 }
