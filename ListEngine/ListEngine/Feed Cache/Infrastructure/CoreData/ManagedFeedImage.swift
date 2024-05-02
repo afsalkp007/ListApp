@@ -27,6 +27,6 @@ extension ManagedFeedImage {
   }
   
   var local: LocalFeedImage {
-    return LocalFeedImage(id: UUID(), name: name, country: country)
+    return LocalFeedImage(id: id, name: name, country: country)
   }
 }

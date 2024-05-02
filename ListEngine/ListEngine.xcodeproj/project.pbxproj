@@ -44,6 +44,7 @@
 		F47ABB802BE328BB0063C7AA /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47ABB732BE328BA0063C7AA /* FeedImageCell.swift */; };
 		F47ABB862BE329A80063C7AA /* ListEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45FE8572BE2DB9A005A04D8 /* ListEngine.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F47ABB872BE329A80063C7AA /* ListEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F45FE8572BE2DB9A005A04D8 /* ListEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F49EDBD52BE3AA4800415107 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = F49EDBD32BE3AA4800415107 /* Feed.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		F47ABB712BE328BA0063C7AA /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		F47ABB722BE328BA0063C7AA /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		F47ABB732BE328BA0063C7AA /* FeedImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
+		F49EDBD42BE3AA4800415107 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		F49EDBD62BE3AA4B00415107 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Feed.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +235,7 @@
 				F45FE8E32BE30CD8005A04D8 /* FeedImagePresenter.swift */,
 				F45FE8E02BE30CD7005A04D8 /* FeedImageViewModel.swift */,
 				F45FE8EA2BE30CEC005A04D8 /* Localized.swift */,
+				F49EDBD32BE3AA4800415107 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -376,6 +380,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hi,
 			);
 			mainGroup = F45FE84D2BE2DB9A005A04D8;
 			productRefGroup = F45FE8582BE2DB9A005A04D8 /* Products */;
@@ -393,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49EDBD52BE3AA4800415107 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +470,18 @@
 			targetProxy = F47ABB832BE329790063C7AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F49EDBD32BE3AA4800415107 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F49EDBD42BE3AA4800415107 /* en */,
+				F49EDBD62BE3AA4B00415107 /* hi */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F45FE8672BE2DB9B005A04D8 /* Debug */ = {
