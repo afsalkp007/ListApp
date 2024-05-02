@@ -61,7 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
   
   private func showDetailView(for image: FeedImage) {
-    let detail = DetailUIComposer.makeDetail()
+    let detail = DetailUIComposer.detailComposed(with: image)
     navigationController.pushViewController(detail, animated: true)
   }
 }

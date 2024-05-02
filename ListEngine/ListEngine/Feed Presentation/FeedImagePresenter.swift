@@ -22,10 +22,7 @@ public final class FeedImagePresenter {
     view.display(
       FeedImageViewModel(
         name: model.name,
-        country: model.country,
-        code: model.code,
-        state: model.state,
-        webpage: model.webpage
+        country: model.country
       )
     )
   }
