@@ -14,6 +14,7 @@ class ManagedFeedImage: NSManagedObject {
   @NSManaged var name: String
   @NSManaged var country: String
   @NSManaged var code: String
+  @NSManaged var state: String?
 }
  
 extension ManagedFeedImage {
@@ -24,11 +25,12 @@ extension ManagedFeedImage {
       managed.name = local.name
       managed.country = local.country
       managed.code = local.code
+      managed.state = local.state
       return managed
     })
   }
   
   var local: LocalFeedImage {
-    return LocalFeedImage(id: id, name: name, country: country, code: code)
+    return LocalFeedImage(id: id, name: name, country: country, code: code, state: state)
   }
 }

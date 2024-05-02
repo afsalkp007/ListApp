@@ -12,11 +12,13 @@ public struct LocalFeedImage: Equatable {
   let name: String
   let country: String
   let code: String
+  let state: String?
 
-  init(id: UUID, name: String, country: String, code: String) {
+  init(id: UUID, name: String, country: String, code: String, state: String?) {
     self.id = id
     self.name = name
     self.country = country
     self.code = code
+    self.state = state
   }
 }

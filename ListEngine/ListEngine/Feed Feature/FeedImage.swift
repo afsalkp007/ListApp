@@ -12,11 +12,13 @@ public struct FeedImage: Equatable {
   public let name: String
   public let country: String
   public let code: String
+  public let state: String?
   
-  public init(id: UUID, name: String, country: String, code: String) {
+  public init(id: UUID, name: String, country: String, code: String, state: String?) {
     self.id = id
     self.name = name
     self.country = country
     self.code = code
+    self.state = state
   }
 }
