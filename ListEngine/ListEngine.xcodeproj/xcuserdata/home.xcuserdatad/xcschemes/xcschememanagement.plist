@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>LIstiOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>ListEngine.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>F45FE85E2BE2DB9B005A04D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F45FE8F02BE30FBD005A04D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

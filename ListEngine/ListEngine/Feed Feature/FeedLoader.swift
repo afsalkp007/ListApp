@@ -1,17 +1,14 @@
 //
 //  FeedLoader.swift
-//  ListEngine
+//  EssentialFeed
 //
-//  Created by Afsal on 02/05/2024.
+//  Created by Afsal on 09/03/2024.
 //
 
 import Foundation
 
-public enum LoadFeedResult {
-  case success([FeedItem])
-  case failure(Error)
-}
-
 public protocol FeedLoader {
-  func load(completion: @escaping (LoadFeedResult) -> Void)
+  typealias Result = Swift.Result<[FeedImage], Error>
+  
+  func load(completion: @escaping (Result) -> Void)
 }

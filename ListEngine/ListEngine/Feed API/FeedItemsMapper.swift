@@ -1,42 +1,28 @@
 //
 //  FeedItemsMapper.swift
-//  ListEngine
+//  EssentialFeed
 //
-//  Created by Afsal on 02/05/2024.
+//  Created by Afsal on 13/03/2024.
 //
 
 import Foundation
 
-class FeedItemsMapper {
+final class FeedItemsMapper {
 
   private struct Item: Decodable {
     let name: String
-    let state: String?
     let country: String
-    let countryCode: String
-    let webpage: [String]
-    
-    var item: FeedItem {
-      return FeedItem(name: name, state: state, country: country, countryCode: countryCode, webpage: webpage)
-    }
-    
-    private enum CodingKeys: String, CodingKey {
-      case name
-      case state = "state-province"
-      case country
-      case countryCode = "alpha_two_code"
-      case webpage = "web_pages"
+
+    var remote: RemoteFeedItem {
+      return RemoteFeedItem(name: name, country: country)
     }
   }
-  
-  static var OK_200: Int { return 200 }
-
-  internal static func map(_ data: Data, from response: HTTPURLResponse) -> RemoteFeedLoader.Result {
-    guard response.statusCode == OK_200,
-      let feed = try? JSONDecoder().decode([Item].self, from: data) else {
-      return .failure(RemoteFeedLoader.Error.invalidData)
+    
+  static func map(_ data: Data, from response: HTTPURLResponse) throws -> [RemoteFeedItem] {
+    guard response.isOK, let items = try? JSONDecoder().decode([Item].self, from: data) else {
+      throw RemoteFeedLoader.Error.invalidData
     }
     
-    return .success(feed.map(\.item))
+    return items.map(\.remote)
   }
 }
