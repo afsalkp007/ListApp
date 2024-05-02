@@ -14,7 +14,7 @@ final class FeedItemsMapper {
     let country: String
 
     var remote: RemoteFeedItem {
-      return RemoteFeedItem(name: name, country: country)
+      return RemoteFeedItem(id: UUID(), name: name, country: country)
     }
   }
     
