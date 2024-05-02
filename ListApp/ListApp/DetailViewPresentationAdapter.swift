@@ -12,13 +12,18 @@ final class DetailViewPresentationAdapter: DetailViewControllerDelegate {
   var presenter: DetailPresenter?
   
   private let feed: FeedImage
+  private let callback: EmptyClosure
   
-  init(presenter: DetailPresenter? = nil, feed: FeedImage) {
-    self.presenter = presenter
+  init(feed: FeedImage, callback: @escaping EmptyClosure) {
     self.feed = feed
+    self.callback = callback
   }
   
   func loadFeed() {
     presenter?.didFinishLoadingDetail(with: feed)
+  }
+  
+  func goBack() {
+    callback()
   }
 }

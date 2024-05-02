@@ -7,6 +7,7 @@
 
 import Foundation
 import ListEngine
+import LIstiOS
 
 final class MainQueueDispatchDecorator<T> {
   private let decoratee: T
@@ -15,7 +16,7 @@ final class MainQueueDispatchDecorator<T> {
     self.decoratee = decoratee
   }
   
-  func dispatch(completion: @escaping () -> Void) {
+  func dispatch(completion: @escaping EmptyClosure) {
     guard Thread.isMainThread else {
       return DispatchQueue.main.async(execute: completion)
     }

@@ -11,8 +11,8 @@ import LIstiOS
 
 final class DetailUIComposer {
   
-  static func detailComposed(with feed: FeedImage) -> DetailViewController {
-    let adapter = DetailViewPresentationAdapter(feed: feed)
+  static func detailComposed(with feed: FeedImage, callback: @escaping EmptyClosure) -> DetailViewController {
+    let adapter = DetailViewPresentationAdapter(feed: feed, callback: callback)
     let controller = makeWith(delegate: adapter, title: Localized.Detail.title)
     
     adapter.presenter = DetailPresenter(detailView: WeakRefVirtualProxy(controller))

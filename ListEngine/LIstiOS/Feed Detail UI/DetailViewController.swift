@@ -10,6 +10,7 @@ import ListEngine
 
 public protocol DetailViewControllerDelegate {
   func loadFeed()
+  func goBack()
 }
 
 public class DetailViewController: UIViewController, DetailView {
@@ -33,5 +34,9 @@ public class DetailViewController: UIViewController, DetailView {
     countryLabel.text = viewModel.country
     codeLabel.text = viewModel.code
     webpageLabel.text = viewModel.webpage
+  }
+  
+  @IBAction func refresh(_ sender: UIButton) {
+    delegate?.goBack()
   }
 }

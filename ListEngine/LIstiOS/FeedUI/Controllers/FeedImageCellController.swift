@@ -8,6 +8,8 @@
 import UIKit
 import ListEngine
 
+public typealias EmptyClosure = () -> Void
+
 public protocol FeedImageCellControllerDelegate {
   func didRequestData()
   func didCancelDataRequest()
@@ -15,10 +17,10 @@ public protocol FeedImageCellControllerDelegate {
 
 public final class FeedImageCellController: NSObject, FeedImageView {
   public var delegate: FeedImageCellControllerDelegate
-  private let selection: () -> Void
+  private let selection: EmptyClosure
   private var cell: FeedImageCell?
   
-  public init(delegate: FeedImageCellControllerDelegate, selection: @escaping () -> Void) {
+  public init(delegate: FeedImageCellControllerDelegate, selection: @escaping EmptyClosure) {
     self.delegate = delegate
     self.selection = selection
   }

@@ -35,9 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         decoratee: makeRemoteFeedLoader(),
         cache: localFeedLoader),
       fallback: localFeedLoader),
-    selection: { [weak self] model in
-      self?.showDetailView(for: model)
-    }))
+    selection: showDetailView))
 
   convenience init(httpClient: HTTPClient, store: FeedStore) {
     self.init()
@@ -61,7 +59,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
   
   private func showDetailView(for image: FeedImage) {
-    let detail = DetailUIComposer.detailComposed(with: image)
+    let detail = DetailUIComposer.detailComposed(with: image, callback: { [weak self] in
+      self?.navigationController.popViewController(animated: true)
+    })
     navigationController.pushViewController(detail, animated: true)
   }
 }
