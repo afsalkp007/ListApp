@@ -14,9 +14,10 @@ final class FeedItemsMapper {
     let country: String
     let code: String
     let state: String?
+    let webpages: [String]
 
     var remote: RemoteFeedItem {
-      return RemoteFeedItem(id: UUID(), name: name, country: country, code: code, state: state)
+      return RemoteFeedItem(id: UUID(), name: name, country: country, code: code, state: state, webpage: webpages.first)
     }
     
     private enum CodingKeys: String, CodingKey {
@@ -24,6 +25,7 @@ final class FeedItemsMapper {
       case country
       case code = "alpha_two_code"
       case state = "state-province"
+      case webpages = "web_pages"
     }
   }
     

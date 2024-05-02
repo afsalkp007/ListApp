@@ -13,4 +13,5 @@ struct RemoteFeedItem: Decodable {
   let country: String
   let code: String
   let state: String?
+  let webpage: String?
 }

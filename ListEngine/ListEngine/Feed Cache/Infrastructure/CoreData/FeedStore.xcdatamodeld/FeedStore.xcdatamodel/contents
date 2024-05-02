@@ -9,6 +9,7 @@
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="webpage" optional="YES" attributeType="String"/>
         <relationship name="cache" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedCache" inverseName="feed" inverseEntity="ManagedCache"/>
     </entity>
 </model>
