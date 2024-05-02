@@ -45,6 +45,8 @@
 		F47ABB862BE329A80063C7AA /* ListEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45FE8572BE2DB9A005A04D8 /* ListEngine.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F47ABB872BE329A80063C7AA /* ListEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F45FE8572BE2DB9A005A04D8 /* ListEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F49EDBD52BE3AA4800415107 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = F49EDBD32BE3AA4800415107 /* Feed.strings */; };
+		F49EDBDA2BE3BCF400415107 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49EDBD92BE3BCF400415107 /* DetailViewController.swift */; };
+		F49EDBDE2BE3BD4500415107 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49EDBDD2BE3BD4500415107 /* Detail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		F47ABB732BE328BA0063C7AA /* FeedImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		F49EDBD42BE3AA4800415107 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		F49EDBD62BE3AA4B00415107 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Feed.strings; sourceTree = "<group>"; };
+		F49EDBD92BE3BCF400415107 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F49EDBDD2BE3BD4500415107 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,7 @@
 		F47ABB612BE328AA0063C7AA /* LIstiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F49EDBD72BE3BCB200415107 /* Feed Detail UI */,
 				F47ABB752BE328BA0063C7AA /* FeedUI */,
 			);
 			path = LIstiOS;
@@ -294,6 +299,15 @@
 				F47ABB742BE328BA0063C7AA /* Views */,
 			);
 			path = FeedUI;
+			sourceTree = "<group>";
+		};
+		F49EDBD72BE3BCB200415107 /* Feed Detail UI */ = {
+			isa = PBXGroup;
+			children = (
+				F49EDBD92BE3BCF400415107 /* DetailViewController.swift */,
+				F49EDBDD2BE3BD4500415107 /* Detail.storyboard */,
+			);
+			path = "Feed Detail UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +422,7 @@
 			files = (
 				F47ABB7E2BE328BB0063C7AA /* Feed.storyboard in Resources */,
 				F47ABB7F2BE328BB0063C7AA /* Feed.xcassets in Resources */,
+				F49EDBDE2BE3BD4500415107 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +472,7 @@
 				F47ABB7A2BE328BA0063C7AA /* UITableView+Dequeueing.swift in Sources */,
 				F47ABB762BE328BA0063C7AA /* FeedImageCellController.swift in Sources */,
 				F47ABB802BE328BB0063C7AA /* FeedImageCell.swift in Sources */,
+				F49EDBDA2BE3BCF400415107 /* DetailViewController.swift in Sources */,
 				F47ABB7D2BE328BA0063C7AA /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

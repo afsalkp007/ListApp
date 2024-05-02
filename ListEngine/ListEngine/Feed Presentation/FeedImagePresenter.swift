@@ -19,6 +19,14 @@ public final class FeedImagePresenter {
   }
   
   public func loadData(for model: FeedImage) {
-    view.display(FeedImageViewModel(name: model.name, country: model.country))
+    view.display(
+      FeedImageViewModel(
+        name: model.name,
+        country: model.country,
+        code: model.code,
+        state: model.state,
+        webpage: model.webpage
+      )
+    )
   }
 }

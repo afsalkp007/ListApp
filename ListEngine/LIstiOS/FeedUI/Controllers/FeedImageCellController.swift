@@ -13,12 +13,14 @@ public protocol FeedImageCellControllerDelegate {
   func didCancelDataRequest()
 }
 
-public final class FeedImageCellController: FeedImageView {
-  private var delegate: FeedImageCellControllerDelegate
+public final class FeedImageCellController: NSObject, FeedImageView {
+  public var delegate: FeedImageCellControllerDelegate
+  private let selection: () -> Void
   private var cell: FeedImageCell?
   
-  public init(delegate: FeedImageCellControllerDelegate) {
+  public init(delegate: FeedImageCellControllerDelegate, selection: @escaping () -> Void) {
     self.delegate = delegate
+    self.selection = selection
   }
 
   func view(in tableView: UITableView) -> UITableViewCell {
@@ -48,5 +50,11 @@ public final class FeedImageCellController: FeedImageView {
   private func releaseCellForReuse() {
     cell?.onReuse = nil
     cell = nil
+  }
+}
+
+extension FeedImageCellController: UITableViewDelegate {
+  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    selection()
   }
 }

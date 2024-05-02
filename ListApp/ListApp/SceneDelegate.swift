@@ -28,6 +28,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   private lazy var localFeedLoader: LocalFeedLoader = {
     LocalFeedLoader(store: store)
   }()
+  
+  private lazy var navigationController = UINavigationController(rootViewController: FeedUIComposer.feedComposedWith(
+    feedLoader: FeedLoaderWithFallbackComposite(
+      primary: FeedLoaderCacheDecorator(
+        decoratee: makeRemoteFeedLoader(),
+        cache: localFeedLoader),
+      fallback: localFeedLoader),
+    selection: { [weak self] model in
+      self?.showDetailView(for: model)
+    }))
 
   convenience init(httpClient: HTTPClient, store: FeedStore) {
     self.init()
@@ -42,16 +52,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
    
   func configureWindow() {
+    window?.rootViewController = navigationController
+  }
+  
+  private func makeRemoteFeedLoader() -> RemoteFeedLoader {
     let remoteURL = URL(string: "http://universities.hipolabs.com/search?country=United%20Arab%20Emirates")!
-    
-    let remoteFeedLoader = RemoteFeedLoader(url: remoteURL, client: httpClient)
-    
-    window?.rootViewController = UINavigationController(rootViewController: FeedUIComposer.feedComposedWith(
-      feedLoader: FeedLoaderWithFallbackComposite(
-        primary: FeedLoaderCacheDecorator(
-          decoratee: remoteFeedLoader,
-          cache: localFeedLoader),
-        fallback: localFeedLoader)))
+    return RemoteFeedLoader(url: remoteURL, client: httpClient)
+  }
+  
+  private func showDetailView(for image: FeedImage) {
+    let detail = DetailUIComposer.makeDetail()
+    navigationController.pushViewController(detail, animated: true)
   }
 }
 

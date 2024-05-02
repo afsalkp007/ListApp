@@ -8,4 +8,7 @@
 public struct FeedImageViewModel {
   public let name: String
   public let country: String
+  public let code: String
+  public let state: String?
+  public let webpage: String?
 }

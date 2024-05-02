@@ -75,6 +75,11 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     removeCellController(forRowAt: indexPath)
   }
   
+  public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let dl = cellController(forRowAt: indexPath)
+    dl.tableView(tableView, didSelectRowAt: indexPath)
+  }
+  
   public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     cellController(forRowAt: indexPath).preload()
   }

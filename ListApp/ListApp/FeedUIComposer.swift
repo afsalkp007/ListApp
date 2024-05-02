@@ -12,7 +12,10 @@ import LIstiOS
 public final class FeedUIComposer {
   private init() {}
   
-  public static func feedComposedWith(feedLoader: FeedLoader) -> FeedViewController {
+  public static func feedComposedWith(
+    feedLoader: FeedLoader,
+    selection: @escaping (FeedImage) -> Void = { _ in }
+) -> FeedViewController {
     let presentationAdapter = FeedLoaderPresentationAdapter(
       feedLoader: MainQueueDispatchDecorator(decoratee: feedLoader)
     )
@@ -24,7 +27,8 @@ public final class FeedUIComposer {
     
     presentationAdapter.presenter = FeedPresenter(
       feedView: FeedViewAdapter(
-        controller: feedController
+        controller: feedController,
+        selection: selection
       ),
       loadingView: WeakRefVirtualProxy(feedController),
       errorView: WeakRefVirtualProxy(feedController)
