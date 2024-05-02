@@ -12,9 +12,16 @@ final class FeedItemsMapper {
   private struct Item: Decodable {
     let name: String
     let country: String
+    let code: String
 
     var remote: RemoteFeedItem {
-      return RemoteFeedItem(id: UUID(), name: name, country: country)
+      return RemoteFeedItem(id: UUID(), name: name, country: country, code: code)
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+      case name
+      case country
+      case code = "alpha_two_code"
     }
   }
     
