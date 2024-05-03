@@ -416,6 +416,7 @@
 				F45FE8532BE2DB9A005A04D8 /* Sources */,
 				F45FE8542BE2DB9A005A04D8 /* Frameworks */,
 				F45FE8552BE2DB9A005A04D8 /* Resources */,
+				F4F8D7E82BE5887C00523AAA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -535,6 +536,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4F8D7E82BE5887C00523AAA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#set -o xtrace\nfind \"${DERIVED_SOURCES_DIR}/CoreDataGenerated/Your_Framework\" -type f -name \"*.h\" -exec cp {} \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\" \\;\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F45FE8532BE2DB9A005A04D8 /* Sources */ = {
