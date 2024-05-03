@@ -52,6 +52,7 @@
 		F4F8D7BC2BE4AC3200523AAA /* ListEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45FE8572BE2DB9A005A04D8 /* ListEngine.framework */; };
 		F4F8D7C42BE4ACA200523AAA /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8D7C32BE4ACA200523AAA /* XCTestCase+MemoryLeakTracking.swift */; };
 		F4F8D7D02BE4B94900523AAA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8D7CF2BE4B94900523AAA /* DetailViewModel.swift */; };
+		F4F8D7D92BE4D10500523AAA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F4F8D7D82BE4D10500523AAA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		F4F8D7C32BE4ACA200523AAA /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		F4F8D7C52BE4ADC000523AAA /* ListAPITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ListAPITests.xctestplan; sourceTree = "<group>"; };
 		F4F8D7CF2BE4B94900523AAA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		F4F8D7D82BE4D10500523AAA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		F45FE84D2BE2DB9A005A04D8 = {
 			isa = PBXGroup;
 			children = (
+				F4F8D7D82BE4D10500523AAA /* README.md */,
 				F45FE8592BE2DB9A005A04D8 /* ListEngine */,
 				F47ABB612BE328AA0063C7AA /* LIstiOS */,
 				F4F8D7B92BE4AC3200523AAA /* ListAPITests */,
@@ -507,6 +510,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F8D7D92BE4D10500523AAA /* README.md in Resources */,
 				F49EDBD52BE3AA4800415107 /* Feed.strings in Resources */,
 				F49EDBEB2BE3D27000415107 /* Detail.strings in Resources */,
 			);
