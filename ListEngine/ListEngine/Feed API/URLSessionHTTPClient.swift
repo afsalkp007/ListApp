@@ -13,7 +13,9 @@ public final class URLSessionHTTPClient: HTTPClient {
   public init(session: URLSession) {
     self.session = session
   }
+}
   
+extension URLSessionHTTPClient {
   private struct UnexpectedValuesRepresentation: Error {}
   
   private struct URLSessionTaskWrapper: HTTPClientTask {

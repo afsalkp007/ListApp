@@ -7,14 +7,6 @@
 
 import Foundation
 
-public struct DetailViewModel {
-  public let name: String
-  public let country: String
-  public let code: String
-  public let state: String?
-  public let webpage: String?
-}
-
 public protocol DetailView {
   func display(_ viewModel: DetailViewModel)
 }

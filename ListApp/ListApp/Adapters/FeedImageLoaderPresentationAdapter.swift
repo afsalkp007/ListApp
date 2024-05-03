@@ -20,6 +20,4 @@ final class FeedImageLoaderPresentationAdapter: FeedImageCellControllerDelegate 
   func didRequestData() {
     presenter?.loadData(for: model)
   }
-  
-  func didCancelDataRequest() {}
 }

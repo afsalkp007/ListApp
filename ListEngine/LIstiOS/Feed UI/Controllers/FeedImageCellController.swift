@@ -12,7 +12,6 @@ public typealias EmptyClosure = () -> Void
 
 public protocol FeedImageCellControllerDelegate {
   func didRequestData()
-  func didCancelDataRequest()
 }
 
 public final class FeedImageCellController: NSObject, FeedImageView {
@@ -46,7 +45,6 @@ public final class FeedImageCellController: NSObject, FeedImageView {
   
   func cancelLoad() {
     releaseCellForReuse()
-    delegate.didCancelDataRequest()
   }
   
   private func releaseCellForReuse() {

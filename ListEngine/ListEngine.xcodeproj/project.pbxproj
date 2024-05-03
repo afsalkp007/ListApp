@@ -51,6 +51,7 @@
 		F4F8D7BB2BE4AC3200523AAA /* ListAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8D7BA2BE4AC3200523AAA /* ListAPITests.swift */; };
 		F4F8D7BC2BE4AC3200523AAA /* ListEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45FE8572BE2DB9A005A04D8 /* ListEngine.framework */; };
 		F4F8D7C42BE4ACA200523AAA /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8D7C32BE4ACA200523AAA /* XCTestCase+MemoryLeakTracking.swift */; };
+		F4F8D7D02BE4B94900523AAA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F8D7CF2BE4B94900523AAA /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		F4F8D7BA2BE4AC3200523AAA /* ListAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAPITests.swift; sourceTree = "<group>"; };
 		F4F8D7C32BE4ACA200523AAA /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		F4F8D7C52BE4ADC000523AAA /* ListAPITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ListAPITests.xctestplan; sourceTree = "<group>"; };
+		F4F8D7CF2BE4B94900523AAA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +341,7 @@
 		F49EDBE42BE3CE4600415107 /* Detail Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F4F8D7CF2BE4B94900523AAA /* DetailViewModel.swift */,
 				F49EDBE52BE3CE6400415107 /* DetailPresenter.swift */,
 				F49EDBE72BE3D1EF00415107 /* Localized+Detail.swift */,
 				F49EDBE92BE3D27000415107 /* Detail.strings */,
@@ -555,6 +558,7 @@
 				F45FE8982BE30439005A04D8 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				F45FE8EB2BE30CED005A04D8 /* Localized.swift in Sources */,
 				F45FE8912BE30374005A04D8 /* FeedItemsMapper.swift in Sources */,
+				F4F8D7D02BE4B94900523AAA /* DetailViewModel.swift in Sources */,
 				F45FE8A42BE305A5005A04D8 /* CoreDataFeedStore.swift in Sources */,
 				F49EDBE62BE3CE6400415107 /* DetailPresenter.swift in Sources */,
 				F45FE8B22BE30645005A04D8 /* FeedStore.xcdatamodeld in Sources */,
