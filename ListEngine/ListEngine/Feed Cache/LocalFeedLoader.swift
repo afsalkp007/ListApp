@@ -70,12 +70,12 @@ extension LocalFeedLoader: FeedLoader {
 
 private extension Array where Element == FeedImage {
   func toLocal() -> [LocalFeedImage] {
-    return map { LocalFeedImage(id: $0.id, name: $0.name, country: $0.country, code: $0.code, state: $0.state, webpage: $0.webpage) }
+    return map { LocalFeedImage(name: $0.name, country: $0.country, code: $0.code, state: $0.state, webpage: $0.webpage) }
   }
 }
 
 private extension Array where Element == LocalFeedImage {
   func toModels() -> [FeedImage] {
-    return map { FeedImage(id: $0.id, name: $0.name, country: $0.country, code: $0.code, state: $0.state, webpage: $0.webpage) }
+    return map { FeedImage( name: $0.name, country: $0.country, code: $0.code, state: $0.state, webpage: $0.webpage) }
   }
 }

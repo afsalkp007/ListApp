@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "0F4614CC-6430-4B9F-9225-990322CFC885",
+      "name" : "Configuration",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:ListEngine.xcodeproj",
+          "identifier" : "F45FE8562BE2DB9A005A04D8",
+          "name" : "ListEngine"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ListEngine.xcodeproj",
+        "identifier" : "F4F8D7B72BE4AC3200523AAA",
+        "name" : "ListAPITests"
+      }
+    }
+  ],
+  "version" : 1
+}

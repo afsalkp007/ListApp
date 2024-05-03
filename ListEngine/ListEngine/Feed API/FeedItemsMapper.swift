@@ -17,7 +17,7 @@ final class FeedItemsMapper {
     let webpages: [String]
 
     var remote: RemoteFeedItem {
-      return RemoteFeedItem(id: UUID(), name: name, country: country, code: code, state: state, webpage: webpages.first)
+      return RemoteFeedItem(name: name, country: country, code: code, state: state, webpage: webpages.first)
     }
     
     private enum CodingKeys: String, CodingKey {

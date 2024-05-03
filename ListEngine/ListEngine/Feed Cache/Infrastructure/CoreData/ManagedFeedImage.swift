@@ -22,7 +22,7 @@ extension ManagedFeedImage {
   static func images(from feed: [LocalFeedImage], in context: NSManagedObjectContext) -> NSOrderedSet {
     return NSOrderedSet(array: feed.map { local in
       let managed = ManagedFeedImage(context: context)
-      managed.id = local.id
+      managed.id = UUID()
       managed.name = local.name
       managed.country = local.country
       managed.code = local.code
@@ -33,6 +33,6 @@ extension ManagedFeedImage {
   }
   
   var local: LocalFeedImage {
-    return LocalFeedImage(id: id, name: name, country: country, code: code, state: state, webpage: webpage)
+    return LocalFeedImage(name: name, country: country, code: code, state: state, webpage: webpage)
   }
 }
