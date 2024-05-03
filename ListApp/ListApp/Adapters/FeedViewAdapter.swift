@@ -20,7 +20,7 @@ final class FeedViewAdapter: FeedView {
   
   public func display(_ viewModel: FeedViewModel) {
     controller?.display(viewModel.feed.map { [weak self] model in
-      let adapter = FeedImageDataLoaderPresentationAdapter(model: model)
+      let adapter = FeedImageLoaderPresentationAdapter(model: model)
       let view = FeedImageCellController(delegate: adapter, selection: {
         self?.selection(model)
       })

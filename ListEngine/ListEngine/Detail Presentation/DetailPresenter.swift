@@ -20,14 +20,14 @@ public protocol DetailView {
 }
 
 final public class DetailPresenter {
-  private let detailView: DetailView
+  private let view: DetailView
 
   public init(detailView: DetailView) {
-    self.detailView = detailView
+    self.view = detailView
   }
   
   public func didFinishLoadingDetail(with feed: FeedImage) {
-    detailView.display(
+    view.display(
       DetailViewModel(
         name: feed.name,
         country: feed.country,

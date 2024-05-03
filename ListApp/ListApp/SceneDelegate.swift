@@ -61,10 +61,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   private func showDetailView(for image: FeedImage) {
     let detail = DetailUIComposer.detailComposed(with: image, callback: { [weak self] in
       self?.navigationController.dismiss(animated: true, completion: {
-        (self?.navigationController.topViewController as? FeedViewController)?.delegate?.didRequestFeedRefresh()
+        self?.refreshFeedView(with: self?.navigationController)
       })
     })
     navigationController.present(detail, animated: true)
+  }
+  
+  private func refreshFeedView(with nav: UINavigationController?) {
+    if let controller = nav?.topViewController as? FeedViewController {
+      controller.delegate?.didRequestFeedRefresh()
+    }
   }
 }
 

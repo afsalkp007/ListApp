@@ -23,7 +23,7 @@
 		F47ABB9C2BE32E4E0063C7AA /* LIstiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47ABB992BE32E4E0063C7AA /* LIstiOS.framework */; };
 		F47ABB9D2BE32E4E0063C7AA /* LIstiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F47ABB992BE32E4E0063C7AA /* LIstiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F49EDBD02BE3907800415107 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49EDBCF2BE3907800415107 /* Main.storyboard */; };
-		F49EDBD22BE392AD00415107 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49EDBD12BE392AD00415107 /* FeedImageDataLoaderPresentationAdapter.swift */; };
+		F49EDBD22BE392AD00415107 /* FeedImageLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49EDBD12BE392AD00415107 /* FeedImageLoaderPresentationAdapter.swift */; };
 		F49EDBE02BE3BF2500415107 /* DetailUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49EDBDF2BE3BF2500415107 /* DetailUIComposer.swift */; };
 		F49EDBE22BE3CDC900415107 /* DetailViewPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49EDBE12BE3CDC900415107 /* DetailViewPresentationAdapter.swift */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 		F47ABB982BE32E4E0063C7AA /* ListEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ListEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47ABB992BE32E4E0063C7AA /* LIstiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LIstiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49EDBCF2BE3907800415107 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		F49EDBD12BE392AD00415107 /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
+		F49EDBD12BE392AD00415107 /* FeedImageLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedImageLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		F49EDBDF2BE3BF2500415107 /* DetailUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUIComposer.swift; sourceTree = "<group>"; };
 		F49EDBE12BE3CDC900415107 /* DetailViewPresentationAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewPresentationAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,16 +100,11 @@
 			children = (
 				F463A0EB2BE314FB00CD161C /* AppDelegate.swift */,
 				F463A0ED2BE314FB00CD161C /* SceneDelegate.swift */,
-				F47ABB8D2BE32CCD0063C7AA /* FeedLoaderCacheDecorator.swift */,
-				F47ABB892BE32CCC0063C7AA /* FeedLoaderPresentationAdapter.swift */,
-				F49EDBE12BE3CDC900415107 /* DetailViewPresentationAdapter.swift */,
-				F47ABB8C2BE32CCD0063C7AA /* FeedLoaderWithFallbackComposite.swift */,
-				F47ABB8A2BE32CCC0063C7AA /* FeedUIComposer.swift */,
-				F49EDBDF2BE3BF2500415107 /* DetailUIComposer.swift */,
-				F47ABB8E2BE32CCD0063C7AA /* FeedViewAdapter.swift */,
-				F47ABB8F2BE32CCD0063C7AA /* MainQueueDispatchDecorator.swift */,
-				F47ABB8B2BE32CCD0063C7AA /* WeakRefVirtualProxy.swift */,
-				F49EDBD12BE392AD00415107 /* FeedImageDataLoaderPresentationAdapter.swift */,
+				F4F8D7C82BE4B65500523AAA /* Decorators */,
+				F4F8D7CB2BE4B67700523AAA /* Adapters */,
+				F4F8D7CC2BE4B6AB00523AAA /* Composers */,
+				F4F8D7CD2BE4B6C600523AAA /* Proxy */,
+				F4F8D7CE2BE4B6D400523AAA /* Composite */,
 				F49EDBCF2BE3907800415107 /* Main.storyboard */,
 				F463A0F42BE314FD00CD161C /* Assets.xcassets */,
 				F463A0F62BE314FD00CD161C /* LaunchScreen.storyboard */,
@@ -125,6 +120,51 @@
 				F47ABB992BE32E4E0063C7AA /* LIstiOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4F8D7C82BE4B65500523AAA /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				F47ABB8D2BE32CCD0063C7AA /* FeedLoaderCacheDecorator.swift */,
+				F47ABB8F2BE32CCD0063C7AA /* MainQueueDispatchDecorator.swift */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
+		F4F8D7CB2BE4B67700523AAA /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				F47ABB8E2BE32CCD0063C7AA /* FeedViewAdapter.swift */,
+				F47ABB892BE32CCC0063C7AA /* FeedLoaderPresentationAdapter.swift */,
+				F49EDBE12BE3CDC900415107 /* DetailViewPresentationAdapter.swift */,
+				F49EDBD12BE392AD00415107 /* FeedImageLoaderPresentationAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		F4F8D7CC2BE4B6AB00523AAA /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				F47ABB8A2BE32CCC0063C7AA /* FeedUIComposer.swift */,
+				F49EDBDF2BE3BF2500415107 /* DetailUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
+		F4F8D7CD2BE4B6C600523AAA /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				F47ABB8B2BE32CCD0063C7AA /* WeakRefVirtualProxy.swift */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		F4F8D7CE2BE4B6D400523AAA /* Composite */ = {
+			isa = PBXGroup;
+			children = (
+				F47ABB8C2BE32CCD0063C7AA /* FeedLoaderWithFallbackComposite.swift */,
+			);
+			path = Composite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +241,7 @@
 			files = (
 				F47ABB952BE32CCD0063C7AA /* FeedViewAdapter.swift in Sources */,
 				F47ABB962BE32CCD0063C7AA /* MainQueueDispatchDecorator.swift in Sources */,
-				F49EDBD22BE392AD00415107 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
+				F49EDBD22BE392AD00415107 /* FeedImageLoaderPresentationAdapter.swift in Sources */,
 				F47ABB902BE32CCD0063C7AA /* FeedLoaderPresentationAdapter.swift in Sources */,
 				F47ABB912BE32CCD0063C7AA /* FeedUIComposer.swift in Sources */,
 				F47ABB922BE32CCD0063C7AA /* WeakRefVirtualProxy.swift in Sources */,

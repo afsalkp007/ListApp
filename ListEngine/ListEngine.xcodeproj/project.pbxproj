@@ -37,10 +37,8 @@
 		F47ABB792BE328BA0063C7AA /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47ABB6B2BE328BA0063C7AA /* UIRefreshControl+Helpers.swift */; };
 		F47ABB7A2BE328BA0063C7AA /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47ABB6C2BE328BA0063C7AA /* UITableView+Dequeueing.swift */; };
 		F47ABB7B2BE328BA0063C7AA /* UITableView+HeaderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47ABB6D2BE328BA0063C7AA /* UITableView+HeaderSizing.swift */; };
-		F47ABB7C2BE328BA0063C7AA /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47ABB6E2BE328BA0063C7AA /* UIView+Shimmering.swift */; };
 		F47ABB7D2BE328BA0063C7AA /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47ABB702BE328BA0063C7AA /* ErrorView.swift */; };
 		F47ABB7E2BE328BB0063C7AA /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47ABB712BE328BA0063C7AA /* Feed.storyboard */; };
-		F47ABB7F2BE328BB0063C7AA /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47ABB722BE328BA0063C7AA /* Feed.xcassets */; };
 		F47ABB802BE328BB0063C7AA /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47ABB732BE328BA0063C7AA /* FeedImageCell.swift */; };
 		F47ABB862BE329A80063C7AA /* ListEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45FE8572BE2DB9A005A04D8 /* ListEngine.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F47ABB872BE329A80063C7AA /* ListEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F45FE8572BE2DB9A005A04D8 /* ListEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -119,10 +117,8 @@
 		F47ABB6B2BE328BA0063C7AA /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		F47ABB6C2BE328BA0063C7AA /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		F47ABB6D2BE328BA0063C7AA /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
-		F47ABB6E2BE328BA0063C7AA /* UIView+Shimmering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		F47ABB702BE328BA0063C7AA /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F47ABB712BE328BA0063C7AA /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
-		F47ABB722BE328BA0063C7AA /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		F47ABB732BE328BA0063C7AA /* FeedImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		F49EDBD42BE3AA4800415107 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		F49EDBD62BE3AA4B00415107 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Feed.strings; sourceTree = "<group>"; };
@@ -286,8 +282,8 @@
 		F47ABB612BE328AA0063C7AA /* LIstiOS */ = {
 			isa = PBXGroup;
 			children = (
-				F49EDBD72BE3BCB200415107 /* Feed Detail UI */,
-				F47ABB752BE328BA0063C7AA /* FeedUI */,
+				F49EDBD72BE3BCB200415107 /* Detail UI */,
+				F47ABB752BE328BA0063C7AA /* Feed UI */,
 			);
 			path = LIstiOS;
 			sourceTree = "<group>";
@@ -307,7 +303,6 @@
 				F47ABB6B2BE328BA0063C7AA /* UIRefreshControl+Helpers.swift */,
 				F47ABB6C2BE328BA0063C7AA /* UITableView+Dequeueing.swift */,
 				F47ABB6D2BE328BA0063C7AA /* UITableView+HeaderSizing.swift */,
-				F47ABB6E2BE328BA0063C7AA /* UIView+Shimmering.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -318,28 +313,27 @@
 				F47ABB6F2BE328BA0063C7AA /* Helpers */,
 				F47ABB702BE328BA0063C7AA /* ErrorView.swift */,
 				F47ABB712BE328BA0063C7AA /* Feed.storyboard */,
-				F47ABB722BE328BA0063C7AA /* Feed.xcassets */,
 				F47ABB732BE328BA0063C7AA /* FeedImageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F47ABB752BE328BA0063C7AA /* FeedUI */ = {
+		F47ABB752BE328BA0063C7AA /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
 				F47ABB692BE328BA0063C7AA /* Controllers */,
 				F47ABB742BE328BA0063C7AA /* Views */,
 			);
-			path = FeedUI;
+			path = "Feed UI";
 			sourceTree = "<group>";
 		};
-		F49EDBD72BE3BCB200415107 /* Feed Detail UI */ = {
+		F49EDBD72BE3BCB200415107 /* Detail UI */ = {
 			isa = PBXGroup;
 			children = (
-				F49EDBD92BE3BCF400415107 /* DetailViewController.swift */,
-				F49EDBDD2BE3BD4500415107 /* Detail.storyboard */,
+				F4F8D7C62BE4B48900523AAA /* Controllers */,
+				F4F8D7C72BE4B49C00523AAA /* Views */,
 			);
-			path = "Feed Detail UI";
+			path = "Detail UI";
 			sourceTree = "<group>";
 		};
 		F49EDBE42BE3CE4600415107 /* Detail Presentation */ = {
@@ -355,9 +349,9 @@
 		F4F8D7B92BE4AC3200523AAA /* ListAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				F4F8D7C52BE4ADC000523AAA /* ListAPITests.xctestplan */,
 				F4F8D7C22BE4AC9800523AAA /* Helpers */,
 				F4F8D7BA2BE4AC3200523AAA /* ListAPITests.swift */,
-				F4F8D7C52BE4ADC000523AAA /* ListAPITests.xctestplan */,
 			);
 			path = ListAPITests;
 			sourceTree = "<group>";
@@ -368,6 +362,22 @@
 				F4F8D7C32BE4ACA200523AAA /* XCTestCase+MemoryLeakTracking.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F4F8D7C62BE4B48900523AAA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F49EDBD92BE3BCF400415107 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F4F8D7C72BE4B49C00523AAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F49EDBDD2BE3BD4500415107 /* Detail.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,7 +514,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47ABB7E2BE328BB0063C7AA /* Feed.storyboard in Resources */,
-				F47ABB7F2BE328BB0063C7AA /* Feed.xcassets in Resources */,
 				F49EDBDE2BE3BD4500415107 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +568,6 @@
 			files = (
 				F47ABB7B2BE328BA0063C7AA /* UITableView+HeaderSizing.swift in Sources */,
 				F47ABB792BE328BA0063C7AA /* UIRefreshControl+Helpers.swift in Sources */,
-				F47ABB7C2BE328BA0063C7AA /* UIView+Shimmering.swift in Sources */,
 				F47ABB772BE328BA0063C7AA /* FeedViewController.swift in Sources */,
 				F47ABB7A2BE328BA0063C7AA /* UITableView+Dequeueing.swift in Sources */,
 				F47ABB762BE328BA0063C7AA /* FeedImageCellController.swift in Sources */,

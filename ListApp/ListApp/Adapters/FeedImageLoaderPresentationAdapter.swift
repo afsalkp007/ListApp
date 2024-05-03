@@ -8,7 +8,7 @@
 import ListEngine
 import LIstiOS
 
-final class FeedImageDataLoaderPresentationAdapter: FeedImageCellControllerDelegate {
+final class FeedImageLoaderPresentationAdapter: FeedImageCellControllerDelegate {
   private let model: FeedImage
   
   var presenter: FeedImagePresenter?
