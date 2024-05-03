@@ -60,9 +60,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   
   private func showDetailView(for image: FeedImage) {
     let detail = DetailUIComposer.detailComposed(with: image, callback: { [weak self] in
-      self?.navigationController.popViewController(animated: true)
+      self?.navigationController.dismiss(animated: true, completion: {
+        (self?.navigationController.topViewController as? FeedViewController)?.delegate?.didRequestFeedRefresh()
+      })
     })
-    navigationController.pushViewController(detail, animated: true)
+    navigationController.present(detail, animated: true)
   }
 }
 
