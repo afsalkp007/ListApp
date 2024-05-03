@@ -1,0 +1,43 @@
+{
+  "configurations" : [
+    {
+      "id" : "53FEC0DF-C5D1-4694-84B6-6B29A48735A1",
+      "name" : "Configuration",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:..\/ListEngine\/ListEngine.xcodeproj",
+          "identifier" : "F45FE8562BE2DB9A005A04D8",
+          "name" : "ListEngine"
+        },
+        {
+          "containerPath" : "container:..\/ListEngine\/ListEngine.xcodeproj",
+          "identifier" : "F47ABB5F2BE328AA0063C7AA",
+          "name" : "LIstiOS"
+        },
+        {
+          "containerPath" : "container:ListApp.xcodeproj",
+          "identifier" : "F463A0E72BE314FB00CD161C",
+          "name" : "ListApp"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/ListEngine\/ListEngine.xcodeproj",
+        "identifier" : "F4F8D7B72BE4AC3200523AAA",
+        "name" : "ListAPITests"
+      }
+    }
+  ],
+  "version" : 1
+}
