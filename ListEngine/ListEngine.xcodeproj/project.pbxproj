@@ -1006,7 +1006,7 @@
 			);
 			currentVersion = F4F8D7EA2BE58A3500523AAA /* FeedStore.xcdatamodel */;
 			name = FeedStore.xcdatamodeld;
-			path = "/Users/home/Desktop/ListApp/ListEngine/ListEngine/Feed Cache/Infrastructure/CoreData/FeedStore.xcdatamodeld";
+			path = "FeedStore.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
