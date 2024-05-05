@@ -1,6 +1,6 @@
 # List App
 
-
+[![CI](https://github.com/afsalkp007/ListApp/actions/workflows/CI.yml/badge.svg)](https://github.com/afsalkp007/ListApp/actions/workflows/CI.yml)
 
 ## List Feed Feature Specs
 
