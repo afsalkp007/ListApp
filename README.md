@@ -199,7 +199,9 @@ Given the customer is on feed view
 
 ## App Composition
 
-![Composition-2](https://github.com/afsalkp007/ListApp/assets/23147303/349577a5-26bd-4f9c-9214-011336a0e14d)
+![App Composition](https://github.com/afsalkp007/ListApp/assets/23147303/6c0fbc2d-327d-442d-8d83-4d6ea549767a)
+
+
 
 
 
