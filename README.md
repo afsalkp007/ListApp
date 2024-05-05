@@ -195,7 +195,8 @@ Given the customer is on feed view
 
 ## App Architecture
 
-![Architecture-2](https://github.com/afsalkp007/ListApp/assets/23147303/32901349-92d6-4f3a-9524-1dbf898ca271)
+![Architecture](https://github.com/afsalkp007/ListApp/assets/23147303/917963f0-b703-4c15-b66e-2d084b6f42a2)
+
 
 ## App Composition
 
