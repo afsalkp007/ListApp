@@ -48,6 +48,10 @@ extension LocalFeedLoader: FeedCache {
 }
 
 extension LocalFeedLoader: FeedLoader {
+  public enum Error: Swift.Error {
+    case emptyData
+  }
+ 
   public typealias LoadResult = FeedLoader.Result
   
   public func load(completion: @escaping (LoadResult) -> Void) {
@@ -62,7 +66,7 @@ extension LocalFeedLoader: FeedLoader {
         completion(.success(cache.feed.toModels()))
         
       case .success:
-        completion(.success([]))
+        completion(.failure(Error.emptyData))
       }
     }
   }
