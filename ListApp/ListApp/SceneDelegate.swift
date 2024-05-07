@@ -44,13 +44,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    guard let _ = (scene as? UIWindowScene) else { return }
+    guard let scene = (scene as? UIWindowScene) else { return }
     
-    configureWindow()
+    configureWindow(with: scene)
   }
    
-  func configureWindow() {
+  func configureWindow(with scene: UIWindowScene) {
+    window = UIWindow(windowScene: scene)
     window?.rootViewController = navigationController
+    window?.makeKeyAndVisible()
   }
   
   private func makeRemoteFeedLoader() -> RemoteFeedLoader {
