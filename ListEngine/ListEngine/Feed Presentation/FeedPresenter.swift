@@ -36,7 +36,11 @@ final public class FeedPresenter {
   }
   
   public func didFinishLoadingFeed(with feed: [FeedImage]) {
-    feedView.display(FeedViewModel(feed: feed))
+    if feed.isEmpty {
+      errorView.display(.error(message: Localized.Feed.loadError))
+    } else {
+      feedView.display(FeedViewModel(feed: feed))
+    }
     loadingView.display(FeedLoadingViewModel(isLoading: false))
   }
   
