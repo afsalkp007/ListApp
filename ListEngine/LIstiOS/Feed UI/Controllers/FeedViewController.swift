@@ -54,6 +54,7 @@ public final class FeedViewController: UITableViewController {
 
 extension FeedViewController: FeedLoadingView, FeedErrorView {
   public func display(_ viewModel: FeedLoadingViewModel) {
+    refreshControl?.isHidden = !viewModel.isLoading
     refreshControl?.update(viewModel.isLoading)
   }
   
