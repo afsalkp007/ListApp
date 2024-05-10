@@ -59,13 +59,8 @@ extension FeedViewController: FeedLoadingView, FeedErrorView {
   }
   
   public func display(_ viewModel: FeedErrorViewModel) {
-    if let message = viewModel.message {
-      errorView.message = message
-      errorView.isHidden = false
-    } else {
-      errorView.message = .none
-      errorView.isHidden = true
-    }
+    errorView.message = viewModel.message
+    errorView.isHidden = viewModel.message == .none
   }
 }
  
